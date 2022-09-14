@@ -79,8 +79,8 @@ if k=="y":
     print(f"Age = {age}\n")
     print(f"Salary = {salary}\n")
     print(f"Mobile Number = {numb}\n")
-    print(f"City Name = {city}")
-    print(f"City Name = {depart}")
+    print(f"City Name = {city}\n")
+    print(f"City Name = {depart}\n")
 else:
     pass
 

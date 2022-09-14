@@ -28,6 +28,5 @@ print(f"Company Name: {g}\n")
 print(f"Hometown: {h}\n")
 print(f"Blood Group: {i}")
 '''
-a= "My name is Vikrant"
-print (a.center(30,"i"))
+
 

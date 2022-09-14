@@ -25,6 +25,4 @@ x=open("demo.txt", 'w')
 print("Hello World", file = x)
 x.close()
 '''
-c=10
-print(f"{c}")
 

@@ -2,7 +2,9 @@
 c=list(map(int, input("Enter").split()))
 d=max(c)
 print(d)'''
- 
+
+
+
 a= int(input("Enter number of Classes Attended:"))
 
 d= (a/235)*100
@@ -13,3 +15,5 @@ elif  d<70 and d>0:
     print("Not Eligible......")
 else:
      print ("Fu** Off..")    
+
+

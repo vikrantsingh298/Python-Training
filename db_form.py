@@ -1,3 +1,21 @@
+import mariadb 
+import sys
+
+conn = mariadb.connect(
+        user="root",
+        password="Vikrants298@",
+        host="localhost",
+        port=3306,
+        database="employees" )
+cur=conn.cursor() 
+conn.autocommit = True
+
+try:
+    cur.execute("CREATE TABLE people (First_Name VARCHAR(30), Surname VARCHAR(30),AGE INT(11),Salary INT(11),Mobile_Number VARCHAR(20),City VARCHAR(20), Department VARCHAR(20))")
+
+except Exception as y:
+    print (y)
+
 
 while True:
    fname= input("Enter your First name: ")
@@ -73,17 +91,14 @@ while True:
         break    
 
 
-k=input("To Print Form: PRESS y \n To Exit: PRESS n\n")
 
-if k=="y":
-    print(f"Name = {fname} {sname}\n")
-    print(f"Age = {age}\n")
-    print(f"Salary = {salary}\n")
-    print(f"Mobile Number = {numb}\n")
-    print(f"City Name = {city}\n")
-    print(f"City Name = {depart}\n")
-else:
-    pass
+
+cur.execute("""INSERT INTO people(First_Name,Surname,AGE,Salary,Mobile_Number,City,Department) VALUES(?,?,?,?,?,?,?)""",(fname,sname,age,salary,numb,city,depart))
+
+conn.commit()
+
+    
+
 
 
        
